@@ -1,0 +1,31 @@
+body.error404 {
+  .content {
+    max-width: calc(#{$mobile} - #{24px * 2});
+    padding: 30px 24px;
+    width: calc(100% - #{24px * 2});
+    margin: 0 auto;
+
+    @include respond-to("small-tablet") {
+      width: calc(100% - #{52px * 2});
+      max-width: $small-tablet;
+      padding: 60px 52px;
+    }
+
+    @include respond-to("tablet") {
+      width: calc(100% - #{64px * 2});
+      max-width: $tablet;
+      padding: 60px 64px;
+    }
+
+    @include respond-to("desktop") {
+      width: calc(100% - 128px);
+      max-width: $desktop;
+      padding: 60px;
+    }
+
+    @include respond-to("large") {
+      padding: 60px;
+      max-width: 1280px;
+    }
+  }
+}

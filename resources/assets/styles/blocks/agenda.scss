@@ -1,0 +1,39 @@
+.agendaSection {
+  max-width: 100%;
+  width: 100%;
+
+  @include respond-to("tablet") {
+    max-width: 825px;
+  }
+
+  .section-inner {
+    width: 100%;
+  }
+
+  h4 {
+    margin-bottom: 15px;
+  }
+
+  .agenda {
+    .agenda_content {
+      border-left: 4px solid $primary-teal;
+      border-top: 1px solid $primary-deep-purple-25;
+      border-bottom: 1px solid $primary-deep-purple-25;
+      border-right: 1px solid $primary-deep-purple-25;
+      padding: 32px;
+      margin: 10px 0;
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .bottom_content {
+        .p-0 {
+          margin-top: 5px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

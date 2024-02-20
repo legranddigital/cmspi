@@ -1,0 +1,50 @@
+.industry_grid_section {
+  width: 100%;
+  margin: 0 auto;
+
+  .section-inner {
+    width: 100%;
+  }
+
+  div[class^="col-"] {
+    margin-bottom: 1.7rem;
+
+    @include respond-to("tablet") {
+      margin-bottom: 1.7rem;
+      padding: 0 0.85rem;
+    }
+  }
+
+  .industry_grid {
+    .box {
+      background-color: $secondary-mushroom-50;
+    }
+
+    .box_body {
+      .imgWrapper {
+        img {
+          max-width: 100%;
+          height: auto;
+          width: 100%;
+        }
+      }
+
+      .content {
+        width: 100%;
+
+        .wrapper {
+          padding: 40px;
+
+          h4 {
+            margin-top: 0;
+            margin-bottom: 30px;
+          }
+
+          a {
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+  }
+}

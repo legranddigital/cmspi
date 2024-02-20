@@ -1,0 +1,141 @@
+.insightColumnsSection {
+  margin: 0 auto;
+
+  h3 {
+    display: block;
+
+    @include respond-to("tablet") {
+      display: none;
+    }
+  }
+
+  .section-inner {
+    width: 100%;
+  }
+
+  .row {
+    @include respond-to("tablet") {
+      display: flex;
+    }
+
+    display: block;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .insightBox {
+    padding-bottom: 0;
+
+    @include respond-to("tablet") {
+      padding-bottom: 0;
+    }
+
+    .insightImage {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .contentBox {
+    position: relative;
+    height: 100%;
+    display: flex;
+    padding: 0;
+    top: -10px;
+
+    @include respond-to("tablet") {
+      padding: 0 1rem;
+      top: 0;
+    }
+
+    .content {
+      .topInfo {
+        font-size: 0.72rem;
+        padding: 0 0 0 0.45rem;
+        border-left: 0.23rem solid #19aa19;
+
+        &.casestudy {
+          border-left-color: $primary-deep-purple;
+        }
+
+        &.publication {
+          border-left-color: $secondary-mushroom;
+        }
+
+        &.news {
+          border-left-color: $primary-cream;
+        }
+
+        &.video {
+          border-left-color: $accent-red;
+        }
+
+        &.post {
+          border-left-color: $primary-teal;
+        }
+
+        margin-bottom: 1rem;
+
+        .category {
+          margin-right: 0.68rem;
+          font-weight: bold;
+        }
+
+        .date {
+          color: $secondary-deep-grey-75;
+        }
+      }
+    }
+  }
+
+  .content_wrapper {
+    position: relative;
+    left: initial;
+    background-color: $primary-cream;
+    padding: 40px;
+    top: 0;
+
+    @include respond-to("tablet") {
+      top: -80px;
+    }
+  }
+
+  a {
+    margin-top: 35px;
+  }
+
+  .rightCOl {
+    margin-top: 40px;
+
+    @include respond-to("tablet") {
+      margin-top: 0;
+    }
+
+    .contentBox {
+      position: relative;
+      height: 100%;
+      display: flex;
+
+      .contentCard {
+        width: 100%;
+        max-width: 100%;
+
+        .content {
+          padding: 1rem 0;
+          border-top: 1px solid $primary-deep-purple-25;
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+
+    a {
+      color: $black-text;
+      text-decoration: none;
+    }
+  }
+}
+
+.pos-rel {
+  position: relative;
+}

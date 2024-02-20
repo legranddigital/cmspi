@@ -1,0 +1,19 @@
+.flourish {
+  margin: 30px auto !important;
+  max-width: 920px;
+
+  @include respond-to("tablet") {
+    margin: 60px 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  iframe,
+  .container,
+  .col-xs-12 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}

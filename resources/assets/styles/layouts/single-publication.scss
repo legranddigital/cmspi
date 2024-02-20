@@ -1,0 +1,29 @@
+.single-publication {
+  .singlePageSection {
+    margin-top: 45px;
+
+    @include respond-to("tablet") {
+      margin-top: 75px;
+    }
+  }
+}
+
+.single-post {
+  .singlePageSection {
+    margin-top: 45px;
+
+    @include respond-to("tablet") {
+      margin-top: 75px;
+    }
+  }
+}
+
+.single-video {
+  .singlePageSection {
+    margin-top: 45px;
+
+    @include respond-to("tablet") {
+      margin-top: 75px;
+    }
+  }
+}

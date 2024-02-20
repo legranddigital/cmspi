@@ -1,0 +1,74 @@
+.singlePeopleSection {
+  .alignRight {
+    float: left;
+
+    @include respond-to("tablet") {
+      float: right;
+    }
+
+    a.btn--secondary.small.basic {
+      padding: 15px 22px 17px 22px;
+    }
+  }
+
+  .gridBox {
+    line-height: 0;
+
+    .gridImage {
+      width: 100%;
+    }
+  }
+
+  .contentBox {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+
+    .content {
+      h2 {
+        margin: 0 0 1rem 0;
+        color: #fff;
+      }
+
+      .position {
+        color: $accent-seafom-green;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .content_wrapper {
+    position: relative;
+    left: initial;
+    background-color: $primary-deep-purple;
+    padding: 40px 32px;
+    width: calc(100% + 50px);
+
+    @include respond-to("tablet") {
+      left: -90px;
+      margin: 2rem 0;
+      padding: 75px;
+    }
+  }
+
+  .peopleDetails {
+    padding: 25px 0 45px 0;
+
+    @include respond-to("small-tablet") {
+      padding: 75px 0 90px 0;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+body.single-people {
+  .half_bg_overlay {
+    background: linear-gradient(to top, $primary-cream 70%, transparent 50%);
+  }
+}

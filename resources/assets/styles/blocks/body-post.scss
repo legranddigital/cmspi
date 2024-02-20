@@ -1,0 +1,76 @@
+.bodyPostSection {
+  margin: 0 auto;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+
+  .section-inner {
+    width: 100%;
+  }
+
+  .body_post_block {
+    .without_image {
+      justify-content: center;
+    }
+
+    .with_image {
+      .imgWrapper {
+        margin-bottom: 50px;
+
+        @include respond-to("tablet") {
+          margin-bottom: 0;
+        }
+
+        img {
+          max-width: 100%;
+          width: 100%;
+          height: auto;
+          -webkit-filter: drop-shadow(10px 10px 0 $primary-teal);
+          filter: drop-shadow(10px 10px 0 $primary-teal);
+        }
+      }
+
+      &.left_image {
+        .imgWrapper {
+          width: 100%;
+          -webkit-box-ordinal-group: 0;
+          -ms-flex-order: -1;
+          order: -1;
+        }
+
+        .col-lg-6.noImg {
+          @include respond-to("tablet") {
+            -ms-flex-preferred-size: 41.667%;
+            flex-basis: 41.667%;
+            max-width: 41.667%;
+            margin-left: 4.5%;
+            padding-left: 0;
+          }
+
+          @include respond-to("desktop") {
+            margin-left: 5.5%;
+          }
+        }
+      }
+
+      &.right_image {
+        flex-direction: column-reverse;
+
+        @include respond-to("tablet") {
+          flex-direction: initial;
+        }
+
+        .imgWrapper {
+          width: 100%;
+        }
+      }
+    }
+
+    &.box-1 {
+      @include respond-to("tablet") {
+        .col-lg-6 {
+          max-width: 50%;
+        }
+      }
+    }
+  }
+}

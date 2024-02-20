@@ -1,0 +1,38 @@
+.contactformSection {
+  margin: 0 auto !important;
+
+  .form-container {
+    padding: 40px 50px 50px 50px;
+
+    .form-group {
+      margin: 30px 0;
+
+      input,
+      select {
+        font-size: 0.833rem;
+        width: 100%;
+        padding: 0.5rem 0 0.5rem 0;
+        color: $black-text;
+        border-bottom: 1px solid #333;
+      }
+
+      select {
+        padding: 0.5rem 0 0.5rem 0;
+      }
+    }
+
+    input.form {
+      width: initial;
+      padding: 25px 20px;
+      border-bottom: 0;
+      outline: 0;
+      background-color: $primary-deep-purple;
+      color: white;
+    }
+  }
+
+  .contactImg {
+    height: calc(100% - 44px);
+    object-fit: cover;
+  }
+}

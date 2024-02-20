@@ -1,0 +1,103 @@
+.testimonialCustomSection {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+
+  .section-inner {
+    width: 100%;
+  }
+
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include respond-to("tablet") {
+      flex-direction: initial;
+    }
+  }
+
+  div[class^="col-"] {
+    margin-bottom: 0.85rem;
+    padding: 0 0 0 0;
+
+    @include respond-to("tablet") {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .testimonialCustomBox {
+    line-height: 0;
+
+    .author_avatar {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .contentBox {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    p.p-0 {
+      font-size: 1rem;
+      margin: 0;
+
+      @include respond-to("tablet") {
+        font-size: 1.333rem;
+      }
+    }
+  }
+
+  .content_wrapper {
+    position: relative;
+    left: initial;
+    background-color: $accent-seafom-green;
+    padding: 40px;
+    width: 60%;
+    margin: 0 auto;
+    top: 0;
+
+    @include respond-to("tablet") {
+      margin: 2rem 0;
+      right: -100px;
+      width: calc(100% + 50px);
+      top: 0;
+    }
+  }
+
+  .testimonialCustomCol {
+    @include respond-to("small-tablet") {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  &.author_wrapper {
+    margin-bottom: 0 !important;
+
+    @include respond-to("tablet") {
+      margin-bottom: 30px !important;
+    }
+
+    .content_wrapper {
+      top: -50px;
+
+      @include respond-to("tablet") {
+        top: 0;
+      }
+    }
+
+    .testimonialCustomCol {
+      margin-bottom: 0;
+
+      @include respond-to("tablet") {
+        margin-bottom: 0.85rem;
+      }
+    }
+  }
+}

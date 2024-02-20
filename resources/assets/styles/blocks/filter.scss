@@ -1,0 +1,334 @@
+.commonFilterSection {
+  margin: 0 auto 30px auto !important;
+
+  @include respond-to("tablet") {
+    margin: -20px auto 30px auto !important;
+  }
+
+  .section-inner {
+    width: 100%;
+  }
+
+  .filters {
+    display: block;
+
+    @include respond-to("tablet") {
+      display: flex;
+      align-items: center;
+    }
+
+    justify-content: space-between;
+  }
+
+  .custom_dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 0.4rem;
+    margin-bottom: 10px;
+
+    @include respond-to("tablet") {
+      margin-bottom: 0;
+    }
+
+    .select_box {
+      padding: 8px 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      background-color: $secondary-mushroom-50;
+      border-radius: 30px;
+      font-size: 16px;
+
+      .arrow {
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+        border: solid $black-text;
+        border-width: 0 1.5px 1.5px 0;
+        display: inline-block;
+        padding: 3px;
+        margin-bottom: 0.2rem;
+        margin-left: 0.5rem;
+        transition: transform 0.2s ease;
+        -webkit-transition: transform 0.2s ease;
+      }
+
+      &:hover {
+        background-color: $primary-deep-purple;
+        color: #fff;
+
+        .arrow {
+          border-color: #fff;
+        }
+      }
+
+      .icon {
+        font-size: 12px;
+        margin-left: 5px;
+      }
+    }
+
+    .options {
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid $primary-deep-purple-25;
+      display: none;
+      max-height: 85vh;
+      overflow-y: auto;
+      z-index: 1;
+      border-radius: 8px;
+      margin-top: 0.25rem;
+      min-width: 200px;
+      padding: 0;
+
+      label {
+        display: flex;
+        padding: 0.35rem 0.45rem;
+        cursor: pointer;
+        font-size: 0.8rem;
+        white-space: nowrap;
+
+        &:hover {
+          background-color: $primary-deep-purple;
+          color: #fff;
+        }
+
+        input[type="checkbox"] {
+          margin-right: 5px;
+        }
+      }
+    }
+
+    &.atLeastOneSelected {
+      .select_box {
+        background-color: $primary-deep-purple;
+        color: #fff;
+        align-items: center;
+
+        .arrow {
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          border-color: #fff;
+        }
+      }
+
+      .options {
+        label {
+          &.active {
+            background-color: $primary-deep-purple;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .filterBtn {
+    margin-top: 10px;
+
+    @include respond-to("tablet") {
+      margin-top: 30px;
+      font-size: 16px;
+    }
+
+    display: inline-flex;
+  }
+
+  .search {
+    margin-top: 30px;
+
+    @include respond-to("tablet") {
+      margin-top: 0;
+      top: 15px;
+      position: relative;
+    }
+
+    .searchInputWrapper {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      width: 100%;
+
+      .filterSearchInput {
+        border: 0;
+        padding: 0.25rem 0.25rem;
+        width: 100%;
+
+        &:focus,
+        &:focus-visible {
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+.resultPageSection {
+  .cardCol {
+    margin-bottom: 1.5rem;
+  }
+
+  .contentBox {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .content {
+      .topInfo {
+        font-size: 0.72rem;
+        padding: 0 0 0 0.45rem;
+        border-left: 0.23rem solid #19aa19;
+        display: flex;
+
+        &.casestudy {
+          border-left-color: $primary-deep-purple;
+        }
+
+        &.publication {
+          border-left-color: $secondary-mushroom;
+        }
+
+        &.news {
+          border-left-color: $primary-cream;
+        }
+
+        &.video {
+          border-left-color: $accent-red;
+        }
+
+        &.post {
+          border-left-color: $primary-teal;
+        }
+
+        margin-bottom: 1rem;
+
+        .category {
+          margin-right: 0.68rem;
+          font-weight: bold;
+        }
+
+        .date {
+          color: $secondary-deep-grey-75;
+          margin-left: 15px;
+        }
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+
+      .title {
+        margin: 0 0 1rem 0;
+      }
+
+      .body {
+        font-size: 0.75rem;
+      }
+    }
+
+    a.btn--secondary {
+      margin-top: 40px;
+    }
+  }
+
+  .content_wrapper {
+    position: relative;
+    left: initial;
+    background-color: $primary-cream;
+    padding: 40px;
+    width: calc(100% + 50px);
+
+    @include respond-to("tablet") {
+      position: absolute;
+      left: -130px;
+    }
+  }
+
+  .contentCard {
+    padding: 2rem 0;
+    height: calc(100% - 4rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: -1rem;
+  margin-right: -1rem;
+
+  .page-numbers {
+    border: 2px solid $primary-deep-purple;
+    padding: 0.15rem 0.65rem;
+    border-radius: 50%;
+    text-decoration: none;
+    color: $primary-deep-purple;
+    font-size: 15px;
+
+    &.prev {
+      border-radius: 50px;
+      text-decoration: none;
+      max-width: fit-content;
+      padding: 12px 20px;
+      line-height: 0;
+      font-size: 0.833rem;
+    }
+
+    &.next {
+      border-radius: 50px;
+      text-decoration: none;
+      max-width: fit-content;
+      padding: 12px 20px;
+      line-height: 0;
+      font-size: 0.833rem;
+    }
+
+    &.current {
+      background-color: $primary-deep-purple;
+      color: #fff;
+      padding: 12px 20px;
+      line-height: 0;
+      font-size: 0.833rem;
+    }
+
+    &.dots {
+      border: none;
+    }
+  }
+
+  .numbersWrapper {
+    display: flex;
+    padding: 40px 0;
+    margin: 0 auto;
+
+    @include respond-to("tablet") {
+      padding: 60px 0;
+    }
+
+    .page-numbers {
+      height: 38px;
+      width: 38px;
+      padding: 0.15rem;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 8px;
+    }
+  }
+
+  .disabled {
+    opacity: 0.45;
+    pointer-events: none;
+    padding: 12px 20px;
+    line-height: 0;
+    font-size: 0.833rem;
+    display: inline;
+  }
+}

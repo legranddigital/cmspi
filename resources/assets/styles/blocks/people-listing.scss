@@ -1,0 +1,73 @@
+.peopleListingSection {
+  .btnWrapper {
+    display: flex;
+    align-items: center;
+
+    @include respond-to("tablet") {
+      display: block;
+    }
+
+    a {
+      margin-bottom: 1rem;
+    }
+  }
+
+  a.btn--secondary-light.small {
+    padding: 8px 18px !important;
+    width: fit-content !important;
+    float: right;
+    right: 1.4rem;
+    position: absolute;
+
+    @include respond-to("tablet") {
+      position: relative;
+      width: 100% !important;
+      padding: 8px 0 !important;
+      right: 0;
+    }
+  }
+}
+
+img.linkedin {
+  width: 16px;
+}
+
+.circleAndTextBtn {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  margin-bottom: 0;
+  font-size: 0.85rem;
+  margin-top: 0;
+
+  .btnInner {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: $black-text;
+  }
+
+  .circle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: $primary-deep-purple;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    justify-content: center;
+  }
+
+  &.btn-light {
+    color: #fff;
+
+    .btnInner {
+      color: #fff;
+    }
+
+    .circle {
+      background-color: #fff;
+    }
+  }
+}

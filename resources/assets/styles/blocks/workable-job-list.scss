@@ -1,0 +1,106 @@
+.workableJobListSection {
+  background-color: $primary-deep-purple;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  color: #fff;
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  display: block;
+  width: 100%;
+
+  .row {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  h2.whr-group {
+    font-size: 1.722rem;
+    line-height: 130%;
+    letter-spacing: 0;
+    margin: 0;
+
+    @include respond-to("small-tablet") {
+      font-size: 2.5rem;
+      line-height: 115%;
+      letter-spacing: 2px;
+    }
+  }
+
+  li.whr-date {
+    display: none;
+  }
+
+  #whr_embed_hook {
+    .whr-group {
+      display: none;
+    }
+
+    a.shareBtn {
+      margin-bottom: 0;
+    }
+
+    .whr-items {
+      padding-left: 0;
+      margin: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+      .whr-item {
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+        @include respond-to("tablet") {
+          display: flex;
+        }
+
+        &:last-child {
+          border-bottom: 0 solid white;
+        }
+
+        .whr-title {
+          margin-bottom: 0;
+          line-height: 1rem;
+
+          @include respond-to("tablet") {
+            width: 60%;
+          }
+
+          a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+          }
+        }
+
+        .whr-info {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          padding-left: 0;
+          padding-top: 15px;
+          padding-bottom: 15px;
+
+          @include respond-to("tablet") {
+            width: 60%;
+            padding-top: 0;
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+
+    ul {
+      li {
+        list-style: none;
+
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}

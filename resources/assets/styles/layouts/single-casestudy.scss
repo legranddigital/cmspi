@@ -1,0 +1,99 @@
+.singleCasestudySection {
+  div[class^="col-"] {
+    padding-left: 0;
+    padding-right: 0;
+
+    @include respond-to("tablet") {
+      padding-left: 0.632rem;
+      padding-right: 0.632rem;
+    }
+  }
+
+  h1 {
+    font-size: 1.722rem;
+    line-height: 130%;
+    letter-spacing: 0;
+
+    @include respond-to("small-tablet") {
+      font-size: 4.722rem;
+      line-height: 115%;
+      letter-spacing: 1px;
+    }
+  }
+
+  .peopleDetails {
+    padding: 15px 0 25px 0;
+
+    @include respond-to("small-tablet") {
+      padding: 65px 0;
+    }
+
+    ul {
+      padding-left: 20px;
+      line-height: 27.5px;
+    }
+
+    p,
+    p.p-2,
+    ul,
+    ul li {
+      font-size: 0.833rem;
+    }
+
+    p.p-1 {
+      font-size: 1rem;
+    }
+  }
+
+  .row {
+    margin: 0 auto;
+
+    @include respond-to("tablet") {
+      margin-left: -1rem;
+      margin-right: -1rem;
+    }
+
+    .col-lg-2 {
+      align-self: flex-end;
+    }
+  }
+
+  .box {
+    .casestudyImage {
+      width: 100%;
+      margin-top: 2rem;
+    }
+  }
+
+  .topInfo {
+    font-size: 0.72rem;
+    padding: 0 0 0 0.45rem;
+
+    &.casestudy {
+      border-left: 3px solid $primary-deep-purple;
+    }
+
+    margin-bottom: 1rem;
+
+    .category {
+      margin-right: 0.68rem;
+      font-weight: bold;
+    }
+  }
+
+  .details {
+    padding: 110px 0;
+    background-color: $primary-cream;
+  }
+}
+
+.casestudy-template-default {
+  .half_bg_overlay {
+    background: linear-gradient(to top, $primary-cream 50%, transparent 50%);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

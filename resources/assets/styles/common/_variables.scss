@@ -1,0 +1,63 @@
+$primary-teal: #0aabb9;
+$primary-cream: #fef5ee;
+$primary-deep-purple: #241a3c;
+$primary-deep-purple-25:rgba(36, 26, 60, 0.25);
+$primary-deep-purple-10:rgba(36, 26, 60, 0.1);
+
+$secondary-mushroom: #b9b4a0;
+$secondary-mushroom-50:rgba(185, 180, 160, 0.5);
+$secondary-mushroom-25:rgba(185, 180, 160, 0.25);
+$secondary-deep-grey: #363332;
+$secondary-deep-grey-75: rgba(54, 51, 50, 0.75);
+
+$accent-seafom-green: #67c6b6;
+$accent-red:#ba3d58;
+$accent-grey: #c5c5c6;
+
+$black: #000;
+$black-text: #0d1311;
+$white: #fff;
+$off-white: #fbfbfb;
+$white-25: rgba(255, 255, 255, 0.25);
+
+$success: #0fc2a2;
+$success-text: #01483c;
+$success-dark: #068770;
+$success-light: #3dd8b6;
+$success-border: #73e9c9;
+$success-bg-dark: #acf5dd;
+$success-bg-light: #e6fdf4;
+$success-contrast: #012923;
+
+$warning: #c8a427;
+$warning-text: #4a3c0a;
+$warning-dark: #8b7117;
+$warning-light: #dbb751;
+$warning-border: #ebc97e;
+$warning-bg-dark: #f6deb0;
+$warning-bg-light: #fdf4e6;
+$warning-contrast: #302706;
+
+$error: #c62424;
+$error-text: #490909;
+$error-dark: #8a1515;
+$error-light: #da4e54;
+$error-border: #ea7d86;
+$error-bg-dark: #f5afb8;
+$error-bg-light: #fde6e9;
+$error-contrast: #fff;
+
+$breakpoints: (
+  "mobile":  375px,
+  "small-tablet": 768px,
+  "tablet":  992px,
+  "small-laptop":  1080px,
+  "desktop":  1280px,
+  "large": 1920px,
+) !default;
+
+$large: 1920px;
+$desktop: 1280px;
+$tablet: 992px;
+$small-tablet: 768px;
+$mobile: 100%;

@@ -1,0 +1,214 @@
+footer {
+  padding: 0 0 40px 0;
+  color: $black-text;
+
+  @include respond-to("tablet") {
+    padding: 0;
+  }
+
+  a.brand {
+    img {
+      width: 215px;
+      padding-bottom: 50px;
+
+      @include respond-to("tablet") {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .forms {
+    padding-top: 30px;
+
+    @include respond-to("tablet") {
+      padding-top: 0;
+    }
+
+    form {
+      width: 100%;
+      display: block;
+      margin-top: 0;
+
+      @include respond-to("tablet") {
+        display: flex;
+        align-items: center;
+      }
+
+      input[type="email"] {
+        width: 100%;
+        border: 0;
+        border-bottom: 2px solid;
+        margin-right: 1rem;
+        padding: 1rem 0 20px 0;
+        background-image: url("/app/themes/cmspi/resources/assets/images/envelope.svg");
+        background-repeat: no-repeat;
+        background-position: left 17px;
+        background-size: 16px auto;
+        text-indent: 30px;
+        margin-bottom: 20px;
+
+        @include respond-to("tablet") {
+          margin-bottom: 0;
+        }
+
+        &::placeholder {
+          color: $black-text;
+          font-size: 0.833rem;
+        }
+      }
+    }
+  }
+
+  .linkedin {
+    flex-direction: column-reverse;
+    align-items: start;
+    padding: 40px 0;
+
+    @include respond-to("tablet") {
+      align-items: center;
+      flex-direction: initial;
+      position: absolute;
+      right: 20px;
+      margin-top: 40px;
+    }
+
+    a {
+      margin-bottom: 20px;
+      display: flex;
+      position: relative;
+      padding: 15px;
+
+      @include respond-to("tablet") {
+        margin-bottom: 0;
+      }
+
+      &.btn--secondary.small.basic::after {
+        content: "" !important;
+        width: 15px;
+        height: 15px;
+        padding-left: 7px;
+        position: relative;
+        display: block;
+        background-repeat: no-repeat;
+        background-image: url("/app/themes/cmspi/resources/assets/images/linkedin.svg");
+        background-position: right center;
+        float: right;
+        background-size: contain;
+      }
+
+      &.btn--secondary.small.basic:hover::after {
+        content: "" !important;
+        width: 15px;
+        height: 15px;
+        padding: 0 0 0 7px;
+        position: relative;
+        display: block;
+        background-repeat: no-repeat;
+        background-image: url("/app/themes/cmspi/resources/assets/images/linkedin_white.svg");
+        background-position: right center;
+        float: right;
+        background-size: contain;
+      }
+
+      img {
+        top: 2px;
+        position: relative;
+      }
+    }
+  }
+
+  &.content-info .container .row.main {
+    position: relative;
+    display: flex;
+
+    .logo {
+      order: 1;
+
+      @include respond-to("tablet") {
+        order: 1;
+      }
+
+      img {
+        padding-bottom: 0;
+      }
+    }
+
+    .menu {
+      order: 3;
+
+      @include respond-to("tablet") {
+        order: 2;
+      }
+    }
+
+    .forms {
+      order: 2;
+
+      @include respond-to("tablet") {
+        order: 3;
+      }
+    }
+  }
+
+  .link_section_title {
+    margin: 0;
+  }
+
+  .link_section {
+    margin-left: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      a {
+        color: $black-text;
+        text-decoration: none;
+        margin-top: 0;
+      }
+
+      p {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .links {
+    justify-content: space-around;
+    flex-direction: column;
+
+    @include respond-to("tablet") {
+      flex-direction: row;
+      display: flex;
+      padding: 0 1.5rem;
+    }
+
+    .col {
+      padding-bottom: 10px;
+
+      @include respond-to("tablet") {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  h6 {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  .copyright {
+    margin-top: 0;
+
+    @include respond-to("tablet") {
+      margin-top: 40px;
+    }
+  }
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.align-items-center {
+  align-items: center;
+}

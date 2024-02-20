@@ -1,0 +1,250 @@
+$padding1: 3.556rem;
+$padding2: 3.111rem;
+$padding3: 24px;
+
+.contentWithIconSection {
+  margin: 0 auto !important;
+
+  .section-inner {
+    width: 100%;
+  }
+
+  div[class^="col-"] {
+    margin: 12px 0;
+
+    @include respond-to("tablet") {
+      margin: 0;
+    }
+  }
+
+  .box {
+    background-color: $secondary-mushroom-50;
+    height: 100%;
+  }
+
+  .contentWithIconBox {
+    position: relative;
+    padding: 24px;
+    height: calc(100% - #{$padding1 * 2});
+
+    @include respond-to("tablet") {
+      padding: 3.556rem;
+    }
+  }
+
+  .imgWrapper {
+    display: none;
+    align-items: center;
+    margin: 0;
+
+    @include respond-to("tablet") {
+      display: flex;
+    }
+
+    img {
+      flex-shrink: 0;
+    }
+  }
+
+  .learnMoreBtnLink {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 0;
+    font-size: 0.85rem;
+    margin-top: 2rem;
+  }
+
+  .learnMoreBtn {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: $black-text;
+  }
+
+  .circle {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: $primary-deep-purple;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    justify-content: center;
+    border: 2px solid $primary-deep-purple;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("/app/themes/cmspi/resources/assets/images/arrow-learnmore-white.svg");
+
+    &:hover {
+      background-color: white;
+      border: 2px solid $primary-deep-purple;
+      background-image: url("/app/themes/cmspi/resources/assets/images/arrow-learnmore-purple.svg");
+    }
+  }
+
+  .arrow-right,
+  .long-arrow-right {
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .content_wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @media screen and (max-width: 767.98px) {
+      justify-content: flex-start;
+    }
+
+    .content {
+      width: 100%;
+    }
+
+    .titleWrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  .box-1 {
+    .imgWrapper {
+      justify-content: center;
+    }
+  }
+
+  .box-2 {
+    h3 {
+      margin-top: 0;
+
+      @include respond-to("tablet") {
+        margin-top: 0;
+      }
+    }
+
+    .align {
+      align-items: start;
+    }
+
+    .content_wrapper {
+      .title {
+        margin-top: 0;
+        margin-bottom: 3rem;
+      }
+
+      .p-1 {
+        font-size: 0.833rem;
+
+        @include respond-to("tablet") {
+          font-size: 1rem;
+        }
+      }
+
+      .p-2 {
+        margin-top: 40px;
+      }
+    }
+
+    .imgWrapper {
+      justify-content: end;
+      padding: 0;
+      width: 48px;
+      top: 24px;
+      right: 24px;
+      position: absolute;
+
+      @include respond-to("tablet") {
+        width: 88px;
+        top: 0;
+        position: relative;
+      }
+
+      img {
+        min-width: 48px;
+        flex-shrink: 0;
+
+        @include respond-to("tablet") {
+          min-width: 88px;
+        }
+      }
+    }
+
+    [class^="col-"] {
+      &:nth-child(1) {
+        margin-bottom: 20px;
+
+        @include respond-to("tablet") {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .innerCol {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .box-3 {
+    display: block;
+
+    @include respond-to("tablet") {
+      display: flex;
+    }
+  }
+
+  .box-3,
+  .box-4 {
+    .contentWithIconBox {
+      padding: $padding3;
+      height: calc(100% - #{$padding2 * 2});
+
+      @include respond-to("tablet") {
+        padding: 40px 32px;
+        height: calc(100% - 80px);
+      }
+
+      .innerCol {
+        margin: 0;
+      }
+
+      .p-2 {
+        margin-top: 0;
+      }
+
+      h4 {
+        margin: 0;
+
+        @include respond-to("tablet") {
+          margin: 20px 0;
+        }
+      }
+    }
+
+    .imgWrapper {
+      justify-content: end;
+
+      img {
+        height: 48px;
+
+        @include respond-to("tablet") {
+          height: 88px;
+        }
+      }
+    }
+  }
+
+  .innerRow {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.h-100 {
+  height: 100%;
+}

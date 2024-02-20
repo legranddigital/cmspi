@@ -1,0 +1,160 @@
+.insightSection {
+  margin: 0 auto;
+
+  .section-inner {
+    width: 100%;
+  }
+
+  .row {
+    @include respond-to("tablet") {
+      display: flex;
+    }
+
+    display: block;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .insightBox {
+    line-height: 0;
+
+    .insightImage {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .contentBox {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .content {
+      .topInfo {
+        font-size: 0.72rem;
+        padding: 0 0 0 0.45rem;
+        border-left: 0.23rem solid #19aa19;
+
+        &.casestudy {
+          border-left-color: $primary-deep-purple;
+        }
+
+        &.publication {
+          border-left-color: $secondary-mushroom;
+        }
+
+        &.news {
+          border-left-color: $primary-cream;
+        }
+
+        &.video {
+          border-left-color: $accent-red;
+        }
+
+        &.post {
+          border-left-color: $primary-teal;
+        }
+
+        margin-bottom: 1rem;
+
+        .category {
+          margin-right: 0.68rem;
+          font-weight: bold;
+        }
+
+        .date {
+          color: #777;
+        }
+      }
+
+      h4 {
+        margin: 0 0 1rem 0;
+      }
+
+      .body {
+        font-size: 0.75rem;
+      }
+    }
+
+    &.floatingBox {
+      @include respond-to("tablet") {
+        width: calc(100% + 110px);
+        left: -110px;
+      }
+    }
+  }
+
+  .content_wrapper {
+    position: relative;
+    left: initial;
+    background-color: $primary-cream;
+    padding: 40px;
+    width: calc(100% + 50px);
+
+    @include respond-to("tablet") {
+      margin: 2rem 0;
+    }
+  }
+
+  .card-container {
+    .cardCol {
+      border-bottom: 1px solid $primary-deep-purple-25;
+      transition: all 0.3s ease;
+
+      @include respond-to("tablet") {
+        border-right: 1px solid $primary-deep-purple-25;
+        border-bottom: 0 solid white;
+        margin: 15px 0;
+      }
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      &:first-child {
+        @include respond-to("tablet") {
+          padding-left: 1rem;
+        }
+      }
+    }
+  }
+
+  .contentCard {
+    padding: 2rem 0;
+    height: calc(100% - 4rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  a {
+    margin-top: 35px;
+    border: 2px solid $primary-deep-purple;
+
+    &:hover {
+      border: 2px solid $primary-deep-purple;
+    }
+
+    &:focus {
+      border: 2px solid $primary-deep-purple;
+    }
+  }
+
+  .insightCol {
+    @include respond-to("small-tablet") {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  .loadMoreBtnWrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.pos-rel {
+  position: relative;
+}

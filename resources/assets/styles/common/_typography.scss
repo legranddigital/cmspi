@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+@font-face {
+  font-family: "avenirroman";
+  src: url("/app/themes/cmspi/resources/assets/fonts/avenir-roman-webfont.woff2") format("woff2"), url("/app/themes/cmspi/resources/assets/fonts/avenir-roman-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "avenirmedium";
+  src: url("/app/themes/cmspi/resources/assets/fonts/avenir-medium-webfont.woff2") format("woff2"), url("/app/themes/cmspi/resources/assets/fonts/avenir-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  color: $black-text;
+}
+
+h1 {
+  font-size: 2.722rem;
+  line-height: 125%;
+  letter-spacing: 5px;
+  font-family: "avenirroman", sans-serif;
+  font-weight: 400;
+
+  @include respond-to("small-tablet") {
+    font-size: 4.722rem;
+    line-height: 115%;
+    letter-spacing: 1px;
+  }
+}
+
+h2 {
+  font-size: 2.167rem;
+  line-height: 125%;
+  font-family: "avenirroman", sans-serif;
+  font-weight: 400;
+
+  @include respond-to("small-tablet") {
+    font-size: 3.611rem;
+    line-height: 120%;
+  }
+}
+
+h3 {
+  font-size: 1.722rem;
+  line-height: 130%;
+  letter-spacing: 0;
+  font-family: "avenirroman", sans-serif;
+  margin-top: 0;
+  font-weight: 400;
+
+  @include respond-to("small-tablet") {
+    font-size: 2.5rem;
+    line-height: 115%;
+    letter-spacing: 2px;
+  }
+}
+
+h4 {
+  font-size: 1.389rem;
+  line-height: 125%;
+  letter-spacing: 0;
+  font-family: "avenirroman", sans-serif;
+  font-weight: 400;
+
+  @include respond-to("small-tablet") {
+    font-size: 1.667rem;
+    line-height: 125%;
+    letter-spacing: 1px;
+  }
+}
+
+h5 {
+  font-size: 0.889rem;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-family: "avenirmedium", sans-serif;
+}
+
+h6 {
+  font-size: 0.778;
+  line-height: 120%;
+  letter-spacing: 2px;
+  font-family: "avenirmedium", sans-serif;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.889rem;
+}
+
+.p-0 {
+  font-size: 1.333rem;
+  line-height: 150%;
+  letter-spacing: 1px;
+  margin-bottom: 0.889rem;
+}
+
+.p-2 {
+  font-size: 0.833rem;
+  line-height: 150%;
+  letter-spacing: 0;
+  margin-bottom: 0.333rem;
+}
+
+.p-3 {
+  font-size: 0.778rem;
+  line-height: 150%;
+  letter-spacing: 0;
+  margin-bottom: 0.333rem;
+}
+
+a {
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0;
+  margin-bottom: 0.444rem;
+  text-decoration: underline;
+
+  &.sm {
+    font-size: 0.833rem;
+    margin-bottom: 0.333rem;
+  }
+}
+
+input,
+select {
+  font-family: "avenirroman", sans-serif;
+}

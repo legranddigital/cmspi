@@ -1,0 +1,345 @@
+$common-padding: 24px;
+
+body {
+  margin: 0;
+  color: $black-text;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  margin: 30px auto !important;
+  display: block;
+  position: relative;
+
+  @include respond-to("small-tablet") {
+    margin: 90px auto !important;
+  }
+}
+
+body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)),
+.container,
+section {
+  max-width: calc(#{$mobile} - #{24px * 2});
+  padding: 0 24px;
+  width: calc(100% - #{24px * 2});
+  margin: 0 auto;
+
+  @include respond-to("small-tablet") {
+    width: calc(100% - #{52px * 2});
+    max-width: $small-tablet;
+    padding: 0 52px;
+  }
+
+  @include respond-to("tablet") {
+    width: calc(100% - #{64px * 2});
+    max-width: $tablet;
+    padding: 0 64px;
+  }
+
+  @include respond-to("desktop") {
+    width: calc(100% - 128px);
+    max-width: $desktop;
+    padding: 0;
+  }
+
+  @include respond-to("large") {
+    padding: 0;
+    max-width: 1280px;
+  }
+}
+
+.row {
+  margin-left: -0.632rem;
+  margin-right: -0.632rem;
+
+  @include respond-to("small-tablet") {
+    margin-left: -1.053rem;
+    margin-right: -1.053rem;
+  }
+
+  @include respond-to("tablet") {
+    margin-left: -1.053rem;
+    margin-right: -1.053rem;
+  }
+
+  @include respond-to("desktop") {
+    margin-left: -1.053rem;
+    margin-right: -1.053rem;
+  }
+
+  @include respond-to("large") {
+    margin-left: -1.053rem;
+    margin-right: -1.053rem;
+  }
+}
+
+div[class^="col-"] {
+  padding-left: 0.632rem;
+  padding-right: 0.632rem;
+
+  @include respond-to("small-tablet") {
+    padding-left: 1.053rem;
+    padding-right: 1.053rem;
+  }
+
+  @include respond-to("tablet") {
+    padding-left: 1.053rem;
+    padding-right: 1.053rem;
+  }
+
+  @include respond-to("desktop") {
+    padding-left: 1.053rem;
+    padding-right: 1.053rem;
+  }
+
+  @include respond-to("large") {
+    padding-left: 1.053rem;
+    padding-right: 1.053rem;
+  }
+}
+
+select {
+  padding: 8px 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid $secondary-deep-grey;
+  color: $secondary-deep-grey;
+  font-size: 18px;
+  background-color: transparent;
+}
+
+body .container div[class^="col-"].noPadding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+
+  @include respond-to("tablet") {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+  }
+
+  background-color: $secondary-deep-grey;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.arrow-right,
+.arrow-left,
+.long-arrow-right,
+.long-arrow-left {
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+
+  @include respond-to("tablet") {
+    border-top: 1px solid $primary-deep-purple;
+    border-left: 1px solid $primary-deep-purple;
+  }
+
+  &.arrow-right,
+  &.long-arrow-right {
+    transform: rotate(135deg);
+  }
+
+  &.arrow-left,
+  &.long-arrow-left {
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 14px;
+    background-color: white;
+
+    @include respond-to("tablet") {
+      background-color: $primary-deep-purple;
+    }
+
+    transform: rotate(-45deg) translate(5px, 2px);
+  }
+}
+
+.wp-block-group__inner-container {
+  max-width: calc(375px - 48px);
+  padding: 0 24px;
+  width: calc(100% - 48px);
+
+  @include respond-to("tablet") {
+    width: calc(100% - 240px);
+    max-width: 1280px !important;
+    padding: 0 120px;
+  }
+}
+
+.tags {
+  a {
+    color: $black-text;
+    background-color: $accent-seafom-green;
+    padding: 6px 12px;
+  }
+
+  a.featured {
+    background-color: $primary-deep-purple;
+    color: white;
+  }
+}
+
+sup {
+  vertical-align: top;
+  position: relative;
+  top: -0.5em;
+}
+
+br {
+  display: none;
+
+  @include respond-to("mobile") {
+    display: none;
+  }
+
+  @include respond-to("small-tablet") {
+    display: none;
+  }
+
+  @include respond-to("tablet") {
+    display: none;
+  }
+
+  @include respond-to("desktop") {
+    display: inline;
+  }
+
+  @include respond-to("large") {
+    display: inline;
+  }
+}
+
+.slick-dots {
+  margin: 0 auto;
+  list-style: none;
+  width: fit-content;
+  display: flex;
+  padding-left: 0;
+
+  li {
+    margin: 0 2px;
+    list-style: none;
+
+    button {
+      font-size: 0;
+      line-height: 0;
+      display: block;
+      width: 10px;
+      height: 10px;
+      padding: 5px;
+      margin-top: 35px;
+      cursor: pointer;
+      color: transparent;
+      border: 0;
+      outline: none;
+      background: $primary-deep-purple;
+      border-radius: 50%;
+      opacity: 0.25;
+
+      &::before {
+        color: black;
+        font-size: 6px;
+        line-height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        content: "•";
+        text-align: center;
+        opacity: 0.25;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    }
+
+    &.slick-active {
+      button {
+        opacity: 1;
+
+        &::before {
+          color: $primary-deep-purple;
+        }
+      }
+    }
+  }
+}
+
+.wp-block-columns {
+  max-width: 100%;
+  padding: 0;
+  width: 100%;
+  display: block !important;
+
+  @include respond-to("tablet") {
+    max-width: initial;
+    padding: initial;
+    width: initial;
+    display: flex !important;
+  }
+}
+
+body .is-layout-flex > * {
+  width: 100%;
+  max-width: 100%;
+
+  @include respond-to("tablet") {
+    max-width: initial;
+    width: initial;
+  }
+}
+
+body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+  max-width: calc(#{$mobile} - #{24px * 2});
+  padding: 0 24px;
+  width: calc(100% - #{24px * 2});
+  margin: 0 auto;
+
+  @include respond-to("small-tablet") {
+    width: calc(100% - #{52px * 2});
+    max-width: $small-tablet;
+    padding: 0 52px;
+  }
+
+  @include respond-to("tablet") {
+    width: calc(100% - #{64px * 2});
+    max-width: $tablet;
+    padding: 0 64px;
+  }
+
+  @include respond-to("desktop") {
+    width: calc(100% - 128px);
+    max-width: $desktop;
+    padding: 0;
+  }
+
+  @include respond-to("large") {
+    padding: 0;
+    max-width: 1280px;
+  }
+}
+
+.umbraco-block {
+  li {
+    word-break: break-all;
+  }
+}

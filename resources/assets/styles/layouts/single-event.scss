@@ -1,0 +1,214 @@
+.singleEventSection {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+
+  .row {
+    flex-direction: column-reverse;
+
+    @include respond-to("tablet") {
+      flex-direction: row;
+    }
+  }
+
+  .btn--secondary.event {
+    background-color: $primary-deep-purple;
+    color: white;
+    cursor: initial;
+
+    &.past {
+      background-color: $accent-grey;
+      border: 0;
+      color: $black-text;
+    }
+  }
+
+  .bottomContent {
+    margin-top: 30px;
+  }
+
+  @media only screen and (min-width: 75em) {
+    .eventImageWrapper {
+      width: 50vw;
+    }
+  }
+
+  img.eventImage {
+    width: 100%;
+  }
+
+  p.truncate {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  h2.title {
+    margin-top: 10px;
+    margin-bottom: 35px;
+  }
+
+  &.pastEvent {
+    .dateWrapper {
+      .month {
+        background-color: $accent-grey !important;
+      }
+    }
+
+    .registerBtn {
+      background-color: $accent-grey !important;
+      color: #000 !important;
+      pointer-events: none !important;
+    }
+
+    .eventImage {
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+    }
+  }
+
+  .contentBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 0;
+    height: 100%;
+    margin-top: 30px;
+
+    @include respond-to("tablet") {
+      padding-right: 5rem;
+      margin-top: 0;
+    }
+
+    .bottomContent {
+      .eventDetails {
+        display: flex;
+        border: 1px solid $primary-deep-purple-25;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        flex-direction: column;
+
+        @include respond-to("tablet") {
+          flex-direction: row;
+        }
+
+        .dateWrapper {
+          text-align: center;
+          width: 122px;
+          border: 1px solid $primary-deep-purple-25;
+
+          .month {
+            font-weight: bold;
+            background-color: $accent-red;
+            padding: 4px 10px;
+            color: #fff;
+            margin: 0;
+          }
+
+          .day {
+            margin: 8px 0;
+            line-height: 100%;
+          }
+
+          .year {
+            margin-bottom: 10px;
+            margin-top: 0;
+          }
+        }
+
+        .registerEvent {
+          margin-left: 1rem;
+
+          .time {
+            font-weight: 700;
+            margin-bottom: 0;
+            margin-top: 15px;
+          }
+
+          .location {
+            margin-bottom: 25px;
+            margin-top: 0;
+          }
+        }
+      }
+
+      .downloadWrapper {
+        display: flex;
+        justify-content: space-between;
+        background-color: $primary-cream;
+        padding: 0.85rem;
+
+        a {
+          margin-bottom: 0;
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .author-info {
+    @include respond-to("tablet") {
+      display: flex;
+    }
+
+    align-items: center;
+    padding: 0;
+    margin-top: 10px;
+    background-color: $primary-cream;
+
+    .author-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      margin: 0 auto;
+
+      @include respond-to("tablet") {
+        margin: initial;
+        width: 180px;
+      }
+    }
+
+    .author-details {
+      text-align: center;
+      padding: 0 1rem;
+
+      @include respond-to("tablet") {
+        text-align: left;
+      }
+
+      .p-2 {
+        font-weight: bold;
+      }
+
+      .p-3 {
+        margin: 0;
+      }
+
+      .wrapper {
+        display: flex;
+        margin-top: 20px;
+        justify-content: center;
+      }
+    }
+
+    .basic.small.btn--secondary {
+      padding: 5px 15px 5px 15px;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h6 {
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+}
+
+.mr-1 {
+  margin-right: 1rem;
+}

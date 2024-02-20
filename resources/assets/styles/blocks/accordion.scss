@@ -1,0 +1,166 @@
+.singlePageSection {
+  .accordionSection .contentBox {
+    max-width: calc(100%);
+    padding: 0;
+    width: calc(100%);
+    margin: 0 auto;
+    margin-left: 0;
+    margin-right: 0;
+
+    @include respond-to("small-tablet") {
+      width: calc(100% - #{52px * 2});
+      max-width: $small-tablet;
+      padding: 0 52px;
+    }
+
+    @include respond-to("tablet") {
+      width: calc(100% - #{64px * 2});
+      max-width: $tablet;
+      padding: 0 64px;
+    }
+
+    @include respond-to("desktop") {
+      width: calc(100% - 128px);
+      max-width: $desktop;
+      padding: 0;
+    }
+
+    @include respond-to("large") {
+      padding: 0;
+      max-width: 1280px;
+    }
+  }
+}
+
+.accordionSection {
+  margin: 0 auto !important;
+
+  .hide {
+    display: none;
+  }
+
+  @include respond-to("tablet") {
+    width: calc(100% - 128px);
+  }
+
+  .accordion {
+    margin-top: 0;
+  }
+
+  .accordion-content {
+    display: none;
+    padding: 0.55rem 1.4rem;
+    font-size: 0.8rem;
+
+    a,
+    li,
+    ul {
+      font-size: 0.8rem;
+      word-break: break-all;
+    }
+
+    a {
+      text-decoration: none;
+      color: $black;
+    }
+
+    .extra_info {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    p {
+      margin-bottom: 0;
+      word-wrap: break-word;
+
+      @include respond-to("tablet") {
+        margin-bottom: 50px;
+      }
+    }
+
+    .description {
+      margin-bottom: 1.1rem;
+    }
+
+    .col-md-6 {
+      padding-left: 1.1rem;
+      margin-top: 0;
+
+      @include respond-to("tablet") {
+        margin-top: initial;
+      }
+    }
+  }
+
+  .col-md-9.center {
+    margin: 0 auto;
+
+    .accordion {
+      margin-top: 0;
+    }
+
+    .extra_info {
+      display: none;
+    }
+  }
+
+  .section-inner {
+    width: 100%;
+  }
+
+  .accordion-item {
+    margin-bottom: 0.5rem;
+    background-color: $primary-cream;
+
+    &:last-child() {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .accordion-title {
+    padding: 0.55rem 1.4rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .icon {
+      transition: transform 0.3s ease;
+      font-size: 1.8rem;
+      color: #888;
+    }
+
+    h4 {
+      margin: 0;
+    }
+  }
+
+  .icon-wrapper {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+
+    a {
+      font-size: 0.8rem;
+      margin: 0;
+    }
+
+    .icon {
+      margin-right: 1rem;
+    }
+  }
+
+  .rotate-icon {
+    transform: rotate(45deg);
+  }
+
+  .google_map_url {
+    a {
+      padding: 15px 20px;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.resourcesSection {
+  background-color: $accent-seafom-green;
+  padding: 0;
+
+  .inner {
+    padding: 40px 24px;
+
+    @include respond-to("tablet") {
+      padding: 90px 65px;
+    }
+  }
+
+  select {
+    float: none;
+    width: 200px;
+    padding-top: 0;
+
+    @include respond-to("tablet") {
+      float: right;
+    }
+  }
+
+  .noPadding {
+    position: relative;
+    margin-top: 35px;
+
+    select {
+      position: relative;
+
+      @include respond-to("tablet") {
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+
+  .section-inner {
+    margin-top: 35px;
+
+    @include respond-to("tablet") {
+      margin-top: 0;
+    }
+  }
+
+  .cta {
+    margin-top: 35px;
+
+    @include respond-to("tablet") {
+      top: -20px;
+      margin-top: 0;
+    }
+
+    display: flex;
+    align-items: flex-end; /* Changed "end" to "flex-end" */
+    position: relative;
+  }
+}

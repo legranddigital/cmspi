@@ -1,0 +1,677 @@
+/* stylelint-disable */
+.casestudySection {
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  &.three_in_row {
+    .imgWrapper {
+      .logoWrapper {
+        position: absolute;
+        left: 40px;
+        bottom: 40px;
+        width: 134px;
+        display: flex;
+      }
+    }
+
+    .textWrapper {
+      padding: 32px;
+    }
+
+    .btnWrapper {
+      margin-left: 32px;
+      margin-bottom: 32px;
+    }
+  }
+
+  .ctaBtnWrapper {
+    margin-top: 50px;
+  }
+
+  &.slider {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  .section-inner {
+    width: 100%;
+  }
+
+  .casestudyCol {
+    background-color: transparent;
+  }
+
+  .card {
+    display: flex;
+    justify-content: center;
+  }
+
+  .casestudySlide {
+    background-color: $primary-deep-purple;
+    margin-top: 5rem;
+
+    @include respond-to("tablet") {
+      margin-top: 0;
+    }
+  }
+
+  .casestudyBox {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: unset;
+    justify-content: center;
+    top: -50px;
+    left: -5px;
+  
+    @include respond-to("tablet") {
+      left: -80px;
+      justify-content: initial;
+      top: initial;
+    }
+
+    .squareCon {
+      position: relative;
+      width: calc(100% - 5rem);
+      padding-top: calc(100% - 5rem);
+
+      @include respond-to("tablet") {
+        width: 100%;
+        padding-top: 100%;
+      }
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      z-index: 5;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      text-align: center;
+    }
+  }
+
+  .slick-slide {
+    height: 100%;
+  }
+
+  &.slider {
+    .slick-slide {
+      width: calc(100% - 5rem);
+
+      @include respond-to("tablet") {
+        padding: 0 3rem;
+        max-width: 1160px !important;
+        height: initial;
+      }
+    }
+  }
+
+  .col-lg-7.pl-0 {
+    margin-top: 0;
+    @include respond-to("tablet") {
+      margin-top: 40px;
+    }
+  }
+
+  .contentBox {
+    padding: 0;
+
+    @include respond-to("tablet") {
+      padding: 0 1rem;
+    }
+
+    .content_wrapper {
+      color: #fff;
+      padding: 32px;
+      padding-top: 0;
+
+      @include respond-to("tablet") {
+        padding: 80px 80px 80px 0;
+      }
+
+      .content {
+        @include respond-to("tablet") {
+          margin-bottom: 3rem;
+        }
+
+        img {
+          height: 45px;
+          width: auto;
+        }
+
+        .circle {
+          a {
+            border: 2px solid #fff;
+
+            &:hover {
+              background-color: $primary-deep-purple;
+            }
+          }
+        }
+      }
+
+      h3 {
+        margin-top: 0;
+        margin-bottom: 25px;
+        text-align: left;
+
+        @include respond-to("tablet") {
+          margin-top: 40px;
+        }
+      }
+
+      .body {
+        font-size: 0.85rem;
+        margin-bottom: 90px;
+      }
+    }
+  }
+
+  .tags {
+    margin-bottom: 1rem;
+
+    a {
+      text-decoration: none;
+      color: #000;
+      font-size: 0.778rem;
+      margin-right: 0.5rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 25px;
+      display: inline-block;
+
+      &:nth-child(1) {
+        background-color: $accent-seafom-green;
+      }
+
+      &:nth-child(2) {
+        background-color: $secondary-mushroom;
+      }
+
+      &:nth-child(3) {
+        background-color: #fff;
+      }
+    }
+  }
+
+  .section_top {
+    margin-bottom: 2rem;
+
+    h3 {
+      text-align: left;
+    }
+  }
+
+  &.three_in_row,
+  &.carousel,
+  &.single,
+  &.grid {
+    .box {
+      background-color: $primary-deep-purple;
+      height: 100%;
+    }
+
+    .box_body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      color: #fff;
+      justify-content: flex-start;
+
+      @include respond-to("tablet") {
+        justify-content: space-between;
+      }
+
+      .btnWrapper {
+        margin-top: 32px;
+      }
+
+      .content {
+        width: 100%;
+      }
+    }
+
+    .imgWrapper {
+      height: initial;
+      position: relative;
+
+      img {
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .logoWrapper {
+        background-color: white;
+        border-radius: 25%;
+        padding: 10px 50px;
+        border-radius: 50px;
+      }
+    }
+  }
+
+  &.carousel {
+
+    .btnWrapper {
+      margin-left: 40px;
+      margin-bottom: 40px;
+    }
+
+    .textWrapper {
+      padding: 32px;
+
+      @include respond-to("small-tablet") {
+        padding: 40px
+      }
+    }
+
+    .imgWrapper {
+      img {
+        height: initial;
+      }
+
+      .logoWrapper {
+        position: absolute;
+        left: 40px;
+        bottom: 40px;
+      }
+    }
+
+    .slick-track {
+      display: flex !important;
+    }
+
+    .slick-slide {
+      margin: 0.7rem;
+      height: inherit !important;
+
+      &>div {
+        height: 100%;
+      }
+
+      .caseStudySlide {
+        height: 100%;
+      }
+    }
+
+    .slick-prev {
+      left: 27px;
+      z-index: 99;
+    }
+
+    .slick-next {
+      right: 27px;
+      z-index: 99;
+    }
+
+    @include respond-to("small-tablet") {
+      .slick-prev {
+        z-index: 99;
+        left: 50%;
+
+        @include respond-to("tablet") {
+          left: -10px;
+        }
+      }
+
+      .slick-next {
+        z-index: 99;
+        right: 50%;
+
+        @include respond-to("tablet") {
+          right: -10px;
+        }
+      }
+    }
+  }
+
+  &.single {
+    .box {
+      padding: 64px;
+      height: calc(100% - 128px);
+
+      h4 {
+        margin-top: 0;
+      }
+    }
+
+    .imgWrapper {
+      height: 100%;
+
+      .logoWrapper {
+        position: absolute;
+        left: 40px;
+        bottom: 40px;
+      }
+    }
+  }
+
+  &.grid {
+    .gridCol {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin-bottom: 2rem;
+
+      h4 {
+        margin-top: 0;
+      }
+      
+      &.full {
+        padding-left: 0;
+        padding-right: 1rem;
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 2rem;
+        @include respond-to("tablet") {
+          margin-top: 0px;
+          padding-left: 1rem;
+        }
+
+        &.gridCol.pr-0 {
+          margin-bottom: 0;
+          padding-left: 1rem !important;
+      padding-right: 1rem !important;
+          @include respond-to("tablet") {
+            margin-bottom: 2rem;
+            padding-right: 0 !important;
+            
+          }
+        }
+
+        &.gridCol.pl-0 {
+          padding-left: 1rem !important;
+    padding-right: 1rem !important;
+          @include respond-to("tablet") {
+            padding-left: 0 !important;
+          }
+        }
+
+        .box {
+          padding: 32px 32px 64px 32px;
+          @include respond-to("tablet") {
+          padding: 64px;
+          }
+          height: calc(100% - 128px);
+
+          h4 {
+            margin-top: 0;
+          }
+        }
+
+        .imgWrapper {
+          height: 100%;
+          position: relative;
+
+          .logoWrapper {
+            position: absolute;
+            left: 40px;
+            bottom: 40px;
+            width: 134px;
+            display: flex;
+          }
+        }
+      }
+
+      &.half {
+        .box {
+          padding: 0;
+          height: 100%;
+        }
+
+        .box_body {
+          .imgWrapper {
+            .logoWrapper {
+              position: absolute;
+              left: 40px;
+              bottom: 40px;
+              width: 134px;
+              display: flex;
+            }
+          }
+
+          .textWrapper {
+            padding: 32px 32px 0 32px;
+          }
+
+          .btnWrapper {
+            margin-left: 32px;
+            margin-bottom: 32px;
+          }
+        }
+      }
+    }
+  }
+
+  .slick-prev {
+    left: 27px;
+    z-index: 99;
+  }
+
+  .slick-next {
+    right: 27px;
+    z-index: 99;
+  }
+
+  @include respond-to("small-tablet") {
+    .slick-prev {
+      z-index: 99;
+      left: 50%;
+
+      @include respond-to("tablet") {
+        left: 27px;
+      }
+    }
+
+    .slick-next {
+      z-index: 99;
+      right: 50%;
+
+      @include respond-to("tablet") {
+        right: 27px;
+      }
+    }
+  }
+
+  .slick-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border: 0;
+  }
+
+  .slick-next:before,
+  .slick-prev:before {
+    display: none;
+  }
+
+  .circle {
+    justify-content: center;
+    background-color: $primary-teal;
+    border: none;
+    border: 2px solid $primary-teal;
+
+    @include respond-to("tablet") {
+      position: absolute;
+    }
+
+    &:hover {
+      background-color: white;
+      cursor: pointer;
+    }
+
+    &.pull-left {
+      @include respond-to("tablet") {
+        top: 45%;
+      }
+    }
+
+    &.pull-right {
+      @include respond-to("tablet") {
+        top: 45%;
+      }
+    }
+
+    .long-arrow-right {
+      margin-left: 0.35rem;
+    }
+  }
+
+  .ctaBtnLink {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 0;
+    font-size: 0.85rem;
+    margin-top: 2rem;
+  }
+
+  .ctaBtn {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #fff;
+
+    .circle {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      margin-right: 1rem;
+      justify-content: center;
+
+      &:hover {
+        background-color: $primary-teal;
+      }
+    }
+  }
+
+  .slick-dots {
+    margin: 0 auto;
+    list-style: none;
+    width: fit-content;
+    display: flex;
+    padding-left: 0;
+
+    li {
+      margin: 0 2px;
+      list-style: none;
+
+      button {
+        font-size: 0;
+        line-height: 0;
+        display: block;
+        width: 10px;
+        height: 10px;
+        padding: 5px;
+        margin-top: 35px;
+        cursor: pointer;
+        color: transparent;
+        border: 0;
+        outline: none;
+        background: $primary-deep-purple;
+        border-radius: 50%;
+        opacity: 0.25;
+
+        &:before {
+          color: black;
+          font-size: 6px;
+          line-height: 20px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 20px;
+          height: 20px;
+          content: "•";
+          text-align: center;
+          opacity: 0.25;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+      }
+
+      &.slick-active {
+        button {
+          opacity: 1;
+
+          &:before {
+            color: $primary-deep-purple;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@include respond-to("tablet") {
+  .pr-0 {
+    padding-right: 0 !important;
+  }
+
+  .pl-0 {
+    padding-left: 0 !important;
+  }
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.slide_control {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  display: none;
+
+  @include respond-to("tablet") {
+    display: none;
+  }
+
+  .long-arrow-right,
+  .long-arrow-left {
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+
+    &::after {
+      background-color: #000;
+    }
+  }
+
+
+  li {
+    padding: 1rem;
+
+    &.prev {
+      display: block;
+    }
+
+    &.next {
+      display: block;
+    }
+  }
+
+}
+
+.h-100 {
+  height: 100% !important;
+}

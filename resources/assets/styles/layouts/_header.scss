@@ -1,0 +1,835 @@
+/* stylelint-disable */
+.hiddenHeaderArea{
+    height: 84px;
+    width: 100%;
+}
+
+header.mainHeader {
+    background-color: #fff;
+    padding: 20px 0;
+    position:relative;
+
+    @include respond-to("tablet") {
+        height: 44px;
+        transition: all;
+    }
+
+    &.sticky-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        display:none;
+    }
+
+    .medium.btn--primary {
+        padding: 19px 20px
+    }
+
+    .header_con {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-left {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+            padding-right: 10px;
+        @include respond-to("desktop") {
+            padding-right: 45px;
+        }
+        a {
+            margin: 0;
+
+            img {
+                width: 215px;
+                @include respond-to("tablet") {
+                    width: 150px
+                }
+
+                @include respond-to("desktop") {
+                 width: 215px;
+                }
+             }
+        }
+    }
+
+    .menu {
+        color: $black-text;
+        font-size: 0.833rem;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            margin-top: -4px;
+
+            li {
+                padding: 10px 0px;
+                margin: 0 10px 0px 0px;
+
+                @include respond-to("small-laptop") {
+                    padding: 10px 5px;
+                    margin: 0 3px;
+                }
+
+                @include respond-to("desktop") {
+                    padding: 10px;
+                    margin: 0 3px;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $black-text;
+                    font-family: "avenirroman";
+                    font-size: 0.833rem;
+                    line-height: 20px;
+                    padding: 0;
+
+                    &:hover {
+                        color: $primary-teal;
+
+                        .arrow {
+                            transform: rotate(-135deg) !important;
+                            -webkit-transform: rotate(-135deg) !important;
+                            border: solid $primary-teal;
+                            border-width: 0 1.5px 1.5px 0;
+                            display: inline-block;
+                            padding: 3px;
+                            margin-bottom: 0rem;
+                            margin-left: 0.5rem;
+                        }
+                    }
+
+                    &.current {
+                        color: $primary-teal;
+
+                        .arrow {
+                            transform: rotate(-135deg) !important;
+                            -webkit-transform: rotate(-135deg) !important;
+                            border: solid $primary-teal;
+                            border-width: 0 1.5px 1.5px 0;
+                            display: inline-block;
+                            padding: 3px;
+                            margin-bottom: 0rem;
+                            margin-left: 0.5rem;
+                        }
+                    }
+                }
+
+                &.has-submenu {
+                    .arrow {
+                        transform: rotate(45deg);
+                        -webkit-transform: rotate(45deg);
+                        border: solid $black-text;
+                        border-width: 0 1.5px 1.5px 0;
+                        display: inline-block;
+                        padding: 3px;
+                        margin-bottom: 0.2rem;
+                        margin-left: 0.5rem;
+
+                        &.up {
+                            transform: rotate(-135deg);
+                            -webkit-transform: rotate(-135deg);
+                        }
+
+                        &.down {
+                            transform: rotate(45deg);
+                            -webkit-transform: rotate(45deg);
+                        }
+
+                        &.right {
+                            transform: rotate(-45deg) !important;
+                            -webkit-transform: rotate(-45deg) !important;
+                            margin-bottom: 0.1rem;
+                        }
+
+                        .arrow {
+                            transform: rotate(45deg);
+                            -webkit-transform: rotate(45deg);
+                            border: solid $black-text;
+                            border-width: 0 1.5px 1.5px 0;
+                            display: inline-block;
+                            padding: 3px;
+                            margin-bottom: 0.2rem;
+                            margin-left: 0.5rem;
+
+                            &.up {
+                                transform: rotate(-135deg);
+                                -webkit-transform: rotate(-135deg);
+                            }
+
+                            &.down {
+                                transform: rotate(45deg);
+                                -webkit-transform: rotate(45deg);
+                            }
+                        }
+                    }
+
+                    .mega-submenu {
+                        display: none;
+                        position: absolute;
+                        z-index: 999;
+                        width: 100%;
+                        transform: translate(-50%, 0);
+                        left: 50%;
+                        top: 50px;
+                        justify-content: center;
+                        padding-top: 31px;
+
+                        &.show {
+                            display: flex;
+
+                            .mega-submenu-inner {
+                                background-color: #fff;
+                                width: 100%;
+                                padding: 0;
+                                border-top: 1px solid $accent-grey;
+                                border-bottom: 1px solid $accent-grey;
+                                display: flex;
+                                justify-content: center;
+                            }
+                        }
+
+                        .submenu-column {
+                            width: 33.33%;
+                            float: left;
+
+                            h4 {
+                                margin-bottom: 10px;
+                            }
+
+                            ul {
+                                list-style: none;
+                                margin: 0;
+                                padding: 0;
+
+                                li {
+                                    margin-bottom: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .tabs-container {
+        display: flex;
+        margin: 35px 0px;
+
+        .tabs {
+            display: flex;
+            flex-direction: column;
+            width: 25%;
+
+            @include respond-to("tablet") {
+                border-right: 1px solid $primary-deep-purple-10;
+            }
+
+            .tab {
+                padding: 10px 0;
+                margin: 0px 0px;
+                background-color: #fff;
+                cursor: pointer;
+                color: $black-text;
+                font-family: "avenirroman";
+                font-size: 0.833rem;
+
+                &.last {
+                    margin-bottom: 10px
+                }
+
+                &:hover {
+                    color: $primary-teal;
+                }
+
+                &.strong {
+                    font-family: "Poppins";
+                    font-weight: bold;
+                    pointer-events: none;
+
+                    &:hover {
+                        color: $black-text;
+                    }
+                }
+            }
+        }
+
+        .tab-content {
+            margin-left: 35px;
+            width: 70%;
+            padding-left: 0;
+
+            .content {
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+
+                p {
+                    color: $black-text;
+                    font-family: "avenirroman";
+                    font-size: 0.833rem;
+                    padding: 10px 10px;
+                    margin: 5px 0px;
+                }
+
+                h5 {
+                    padding-left: 10px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .header-right {
+        display: none;
+        align-items: center;
+
+        .countries {
+            display: flex;
+            @include respond-to("tablet") {
+                left: 30px
+            }
+
+            @include respond-to("desktop") {
+                left: 0;
+            }
+            select {
+                border: none;
+                padding: 5px;
+                font-size: 0.833rem;
+                margin-top: -4px;
+            }
+
+            img {
+                margin-top: -4px
+            }
+        }
+
+        .search {
+            margin: 0 1.3rem;
+            margin-top: -4px;
+        }
+
+        .btn-primary.medium {
+            content: none;
+        }
+    }
+
+    .searchIcon {
+        cursor: pointer;
+        display: block;
+    }
+
+    .searchIconBlue {
+        display: none;
+    }
+
+    .header_con {
+        .menu {
+            display: none;
+        }
+
+        @include respond-to("tablet") {
+            .menu {
+                display: flex;
+            }
+
+            .header-right {
+                display: flex;
+            }
+        }
+
+        .searchInputWrapper {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            z-index: 999;
+            width: 100%;
+            padding: 0;
+            transform: translate(-50%, 0);
+            left: 50%;
+            top: 84px;
+            border-top: 1px solid $accent-grey;
+            border-bottom: 1px solid $accent-grey;
+            padding: 0.75rem 0;
+
+            .searchMain {
+                display: flex;
+            }
+
+            .searchInput {
+                border: 0;
+                padding: 0.25rem 0.25rem;
+                margin: 0;
+                width: 100%;
+                transition: width 0.6s;
+
+                &:focus,
+                &:focus-visible {
+                    outline: none;
+                }
+            }
+        }
+
+        .search {
+            &.open {
+                .searchIconBlue {
+                    display: block;
+                }
+
+                .searchIcon {
+                    display: none;
+                }
+
+                .searchInputWrapper {
+                    display: flex;
+                }
+
+            }
+        }
+    }
+
+    .closeIcon {
+        cursor: pointer;
+        padding: 0 0.5rem;
+
+        svg {
+            height: 15px;
+            width: 15px;
+        }
+    }
+}
+
+.search-submit {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+    .countries_img {
+        display: block;
+    }
+
+    .countries_img_blue {
+        display: none;
+    }
+
+    &-toggle {
+        background: none;
+        border: none;
+        padding: 0.5rem;
+        cursor: pointer;
+        font-size: 0.833rem;
+        text-indent: initial;
+
+            @include respond-to("tablet") {
+                text-indent: -99999px;
+            }
+
+            @include respond-to("desktop") {
+                text-indent: initial;
+            }
+
+    }
+
+    &:hover {
+        .countries_img {
+            display: none;
+        }
+
+        .countries_img_blue {
+            display: block;
+        }
+
+        .dropdown-toggle {
+            color: $primary-teal;
+        }
+    }
+
+    &-menu {
+        position: absolute;
+        background-color: #ffffff;
+        border: 1px solid $accent-grey;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s, visibility 0.2s;
+        padding: 32px 32px 15px 32px;
+        top: 54px;
+        width: 100%;
+
+        @include respond-to("small-tablet") {
+            min-width: 200px;
+            width: fit-content;
+        }
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            z-index: 1;
+        }
+
+        li {
+            padding: 0rem 0rem 0 0rem;
+
+            a {
+                text-decoration: none;
+                color: $black-text;
+                display: block;
+                transition: background-color 0.2s;
+
+                &:hover {
+                    color: $primary-teal;
+                }
+            }
+
+            .continent {
+                a {
+                    font-size: 15px;
+                    margin-bottom: 15px;
+                }
+            }
+
+            .countries_list {
+                a {
+                    font-size: 12px;
+                    margin-top: -13px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
+.header_con_M {
+    display: none;
+    padding: 0 $common-padding;
+
+    .countries {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+        -webkit-transition: opacity 1s ease, visibility 3s ease;
+        -moz-transition: opacity 1s ease, visibility 3s ease;
+        -ms-transition: opacity 1s ease, visibility 3s ease;
+        -o-transition: opacity 1s ease, visibility 3s ease;
+        transition: opacity 1s ease, visibility 3s ease;
+
+        &.dropdown {
+            position: initial;
+
+            .dropdown-menu {
+                border: none;
+                padding: 32px 0;
+            }
+        }
+
+        img {
+            margin-right: 0.5rem;
+        }
+    }
+
+    .header_top_M {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid $primary-deep-purple-10;
+        border-bottom: 1px solid $primary-deep-purple-10;
+        padding: 0.1rem 0rem;
+        position: relative;
+
+        select {
+            border: 0;
+        }
+    }
+
+    .menu {
+        ul {
+            flex-direction: column;
+        }
+    }
+
+    @include respond-to("tablet") {
+        display: none;
+
+        .menu {
+            display: none;
+        }
+    }
+
+    .search {
+        display: flex;
+    }
+
+    .search-submit {
+        display: none;
+    }
+
+    .searchInputWrapper {
+        display: flex;
+        align-items: center;
+        border: 0;
+        width: 34px;
+        position: absolute;
+        right: 0;
+        background-color: #fff;
+        -webkit-transition: width 0.5s ease;
+        -moz-transition: width 0.5s ease;
+        -ms-transition: width 0.5s ease;
+        -o-transition: width 0.5s ease;
+        transition: width 0.5s ease;
+
+        .container {
+            width: 100%;
+            padding: 0;
+            max-width: 100%;
+        }
+
+        .searchMain {
+            display: flex;
+        }
+
+        .searchInput {
+            border: 0;
+            padding: 0.25rem 0;
+            margin: 0;
+            width: 0;
+            -webkit-transition: width 0.5s ease;
+            -moz-transition: width 0.5s ease;
+            -ms-transition: width 0.5s ease;
+            -o-transition: width 0.5s ease;
+            transition: width 0.5s ease;
+
+            &:focus,
+            &:focus-visible {
+                outline: none;
+            }
+        }
+    }
+
+    &.search_open {
+        .countries {
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transition: opacity 0.01s ease, visibility 0.01s ease;
+            -moz-transition: opacity 0.01s ease, visibility 0.01s ease;
+            -ms-transition: opacity 0.01s ease, visibility 0.01s ease;
+            -o-transition: opacity 0.01s ease, visibility 0.01s ease;
+            transition: opacity 0.01s ease, visibility 0.01s ease;
+        }
+
+        .searchIcon {
+            display: none;
+        }
+
+        .search-submit {
+            display: flex;
+        }
+
+        .searchInputWrapper {
+            width: 100%;
+            padding-top: 4px;
+            background-color: #fff;
+
+            .searchInput {
+                padding: 0.25rem 0.25rem;
+                width: 100%;
+            }
+
+            .closeIcon {
+                display: block !important;
+            }
+        }
+
+    }
+
+}
+
+.navbar_toggler {
+    display: inline-block;
+    cursor: pointer;
+
+    @include respond-to("tablet") {
+        display: none;
+    }
+
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 20px;
+        height: 2px;
+        background-color: #333;
+        margin: 4px 0;
+        transition: 0.4s;
+    }
+
+}
+
+.mobile_menu_open {
+    header.mainHeader {
+        height: 100vh;
+
+        .navbar_toggler {
+            .bar1 {
+                transform: translate(0, 6px) rotate(-45deg);
+            }
+
+            .bar2 {
+                opacity: 0;
+            }
+
+            .bar3 {
+                transform: translate(0, -6px) rotate(45deg);
+            }
+        }
+
+        .header_con_M {
+            display: block;
+            height: 100%;
+
+            .menu {
+                position: relative;
+                height: 100%;
+                margin-top: 15px;
+
+                ul {
+                    li.has-submenu {
+
+                        .megaMenuCon_M,
+                        .content {
+                            display: block;
+                            height: 100%;
+                            width: 100%;
+                            position: fixed;
+                            background-color: #fff;
+                            left: 0;
+                            padding: 0;
+                            z-index: 1;
+                            top: 130px;
+                            padding: 1rem 0 0 0;
+                            margin: 0rem 0rem 0rem;
+                            transform: translateX(-106%);
+                            -webkit-transform: translateX(-106%);
+                            border: 0;
+
+                            &.slideIn {
+                                animation: slide-in 0.5s forwards;
+                                -webkit-animation: slide-in 0.5s forwards;
+                                top: 0px;
+                                position: absolute;
+                            }
+
+                            &.slideOut {
+                                animation: slide-out 0.5s forwards;
+                                -webkit-animation: slide-out 0.5s forwards;
+                            }
+
+                            .menu-item {
+                                align-items: flex-start;
+                                display: flex;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .backBtn {
+                padding: 7px 15px;
+                margin-bottom: 25px;
+            }
+
+            .tabs-container {
+                margin: 5px 0px;
+                display: block;
+
+                .tabs {
+                    width: 100%;
+
+                    .tab {
+                        padding: 5px 0px;
+
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@keyframes slide-in {
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@-webkit-keyframes slide-in {
+    100% {
+        -webkit-transform: translateX(0%);
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-106%);
+    }
+}
+
+@-webkit-keyframes slide-out {
+    0% {
+        -webkit-transform: translateX(0%);
+    }
+
+    100% {
+        -webkit-transform: translateX(-106%);
+    }
+}
+
+.o-h {
+    overflow: hidden;
+}
+
+body.logged-in.admin-bar {
+    header.mainHeader .menu ul li.has-submenu .mega-submenu {
+        top: 53px;
+    }
+
+    .searchInputWrapper {
+        @include respond-to("tablet") {
+            top: 84px
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .hide_on_mobile {
+        display: none;
+    }
+}
+
+@include respond-to("tablet") {
+    .hide_on_desktop {
+        display: none;
+    }
+}

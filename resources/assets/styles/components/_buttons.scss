@@ -1,0 +1,244 @@
+.btn {
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  max-width: fit-content;
+  padding: 12px 20px;
+  line-height: 0;
+
+  img {
+    padding-left: 7px;
+  }
+
+  &.basic {
+    padding: 25px 20px;
+
+    &.small {
+      padding: 15px 15px 15px 15px;
+    }
+
+    &::after {
+      content: none !important;
+    }
+  }
+
+  &--primary {
+    @extend .btn;
+
+    background-color: $primary-deep-purple;
+    color: white;
+    border: 0;
+
+    &:hover {
+      background-color: $primary-teal;
+      cursor: pointer;
+    }
+
+    // &:focus {
+    //   border: 2px solid white;
+    // }
+
+    &:active {
+      box-shadow: 0 0 5px 5px rgba(10, 171, 185, 0.3);
+    }
+
+    &.large {
+      &::after {
+        content: url("/app/themes/cmspi/resources/assets/images/arrow-right-large-white.svg");
+      }
+    }
+
+    &.medium {
+      &::after {
+        content: url("/app/themes/cmspi/resources/assets/images/arrow-right-medium-white.svg");
+      }
+    }
+
+    &.small {
+      &::after {
+        content: url("/app/themes/cmspi/resources/assets/images/arrow-right-small-white.svg");
+      }
+    }
+  }
+
+  &--primary-light {
+    @extend .btn;
+
+    background-color: white;
+    color: $primary-deep-purple;
+    border: 2px solid white;
+
+    &:hover {
+      background-color: $primary-deep-purple;
+      cursor: pointer;
+      color: white;
+      border: 2px solid white;
+    }
+
+    &:focus {
+      background-color: $primary-deep-purple;
+      color: white;
+      border: 2px solid white;
+    }
+
+    &:active {
+      box-shadow: 0 0 5px 5px rgba(10, 171, 185, 0.3);
+    }
+
+    &.large {
+      &::after {
+        content: url("/app/themes/cmspi/resources/assets/images/arrow-right-large-black.svg");
+      }
+    }
+
+    &.medium {
+      &::after {
+        content: url("/app/themes/cmspi/resources/assets/images/arrow-right-medium-black.svg");
+      }
+    }
+
+    &.small {
+      &::after {
+        content: url("/app/themes/cmspi/resources/assets/images/arrow-right-small-black.svg");
+      }
+
+      &:hover::after {
+        content: url("/app/themes/cmspi/resources/assets/images/arrow-right-small-white.svg");
+      }
+    }
+  }
+
+  &--secondary {
+    @extend .btn;
+
+    background-color: transparent;
+    color: $primary-deep-purple;
+    border: 2px solid $primary-deep-purple;
+
+    &:hover {
+      background-color: $primary-deep-purple;
+      border: 2px solid $primary-deep-purple;
+      cursor: pointer;
+      color: white;
+    }
+
+    &:focus {
+      border: 2px solid $primary-deep-purple;
+    }
+
+    &.linkedin {
+      &::after {
+        content: url("/app/themes/cmspi/resources/assets/images/linkedin.svg") !important;
+        width: 15px;
+        height: 15px;
+        padding-left: 7px;
+        position: relative;
+        display: block;
+        background-repeat: no-repeat;
+        background-position: right center;
+        float: right;
+        background-size: contain;
+      }
+
+      &:hover {
+        &::after {
+          content: "" !important;
+          width: 15px;
+          height: 15px;
+          padding: 0 0 0 7px;
+          position: relative;
+          display: block;
+          background-repeat: no-repeat;
+          background-image: url("/app/themes/cmspi/resources/assets/images/linkedin_white.svg");
+          background-position: right center;
+          float: right;
+          background-size: contain;
+        }
+      }
+    }
+
+    &.large {
+      &::after {
+        content: url("/app/themes/cmspi/resources/assets/images/arrow-right-large-black.svg");
+      }
+
+      &:hover::after {
+        content: url("/app/themes/cmspi/resources/assets/images/arrow-right-large-white.svg");
+      }
+    }
+
+    &.medium {
+      &::after {
+        content: url("/app/themes/cmspi/resources/assets/images/arrow-right-medium-black.svg");
+      }
+
+      &:hover::after {
+        content: url("/app/themes/cmspi/resources/assets/images/arrow-right-medium-white.svg");
+      }
+    }
+
+    &.small {
+      &::after {
+        content: url("/app/themes/cmspi/resources/assets/images/arrow-right-small-black.svg");
+      }
+
+      &:hover::after {
+        content: url("/app/themes/cmspi/resources/assets/images/arrow-right-small-white.svg");
+      }
+    }
+  }
+
+  &--secondary-light {
+    @extend .btn;
+
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+
+    &:hover {
+      background-color: transparent;
+      border: 2px solid white;
+      cursor: pointer;
+    }
+
+    &:focus {
+      border: 4px solid $primary-cream;
+    }
+
+    &.large {
+      &::after {
+        content: url("/app/themes/cmspi/resources/assets/images/arrow-right-large-white.svg");
+      }
+    }
+
+    &.medium {
+      &::after {
+        content: url("/app/themes/cmspi/resources/assets/images/arrow-right-medium-white.svg");
+      }
+    }
+
+    &.small {
+      &::after {
+        content: url("/app/themes/cmspi/resources/assets/images/arrow-right-small-white.svg");
+      }
+    }
+  }
+
+  &.large {
+    font-size: 1rem;
+  }
+
+  &.medium {
+    font-size: 0.833rem;
+  }
+
+  &.small {
+    font-size: 0.778rem;
+  }
+
+  &::after {
+    padding-left: 12px;
+  }
+}
